@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Project 4</title>
+    <style>
+      * {
+        text-align: center;
+        box-sizing: content-box;
+        margin: 0px;
+      }
+      #header {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 40px;
+      }
+      #name-tag {
+        font-size: 30px;
+        margin: 20px;
+        font-weight: bolder;
+        font-family: "Times New Roman", Times, serif;
+      }
+      #description {
+        margin: 20px;
+      }
+
+      #keywords {
+        margin-bottom: 40px;
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="header">
+      <h1>Asabeneh Yetayeh challenges in <span id="yearnow">2020</span></h1>
+      <h2>30DaysOfJavaScript Challenge</h2>
+      <h3 id="Date-add">Date</h3>
+    </section>
+
+    <section id="challenge-body">
+      <div id="Challenge"></div>
+      <div id="profile">
+        <div id="name-tag">Asabeneh Yetayeh</div>
+        <div id="url-link"></div>
+        <div id="description"></div>
+        <div id="table"></div>
+        <h3>Keywords</h3>
+        <div
+          id="keywords"
+          style="
+            display: inline-flex;
+            flex-direction: row;
+            justify-content: space-around;
+            gap: 8px;
+            flex-wrap: wrap;
+            width: 100%;
+          "
+        ></div>
+      </div>
+    </section>
+    <script src="app.js"></script>
+  </body>
+</html>
