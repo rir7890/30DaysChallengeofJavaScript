@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Miniproject7</title>
+  </head>
+  <body>
+    <h1>Calculate a Weight of an object on a planet</h1>
+    <input
+      id="mass-kil"
+      type="text"
+      placeholder="Mass in Kilogram"
+      style="
+        padding: 10px;
+        width: 40%;
+        height: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: grey;
+        font-weight: bolder;
+      "
+    />
+    <select id="planet">
+      <option value="3.7">Mercury</option>
+      <option value="8.87">Venus</option>
+      <option value="9.8" selected>Earth</option>
+      <option value="1.62">Moon</option>
+      <option value="3.71">Mars</option>
+      <option value="24.79">Jupiter</option>
+      <option value="10.44">Saturn</option>
+      <option value="8.69">Uranus</option>
+      <option value="11.15">Neptune</option>
+      <option value="0.62">Pluto</option>
+    </select>
+    <button id="btn">Calculate Weight</button>
+    <div id="container" style="">
+      <div id="planet2" style="width: 50%; text-align: center"></div>
+      <div id="result" style="width: 50%; text-align: center"></div>
+      <div id="err"></div>
+    </div>
+    <script>
+      const btn = document.getElementById("btn");
+      const kilomass = document.getElementById("mass-kil");
+      const container = document.getElementById("container");
+      const planet = document.getElementById("planet");
+      const result = document.getElementById("result");
+      const planet2 = document.getElementById("planet2");
+      const err = document.getElementById("err");
+
+      btn.addEventListener("click", function (e) {
+        const massval = Number(kilomass.value);
+        const plnet = Number(planet.value);
+        const planetName = planet.options[planet.selectedIndex].text;
+
+        if (isNaN(massval)) {
+          kilomass.value = "";
+          err.innerHTML = "Please Fill the Mass of the Object Correctly.";
+          return;
+        }
+
+        if (plnet == 9.8) {
+          err.innerHTML = "";
+          planet2.innerHTML = "Earth";
+          result.innerHTML = `The Weight of the Object is ${massval}`;
+          return;
+        }
+
+        const weight = plnet * massval;
+        err.innerHTML = "";
+        planet2.innerHTML = planetName;
+        result.innerHTML = `The weight of the Object is ${weight}`;
+      });
+    </script>
+  </body>
+</html>
