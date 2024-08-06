@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Miniproject9</title>
+    <style>
+      body {
+        background-color: rgb(145, 208, 208);
+        text-align: center;
+      }
+      button {
+        padding: 5px 20px;
+        border-radius: 8px;
+        font-size: large;
+      }
+      input {
+        font-size: 20px;
+        margin-top: 20px;
+        padding: 10px 10px 10px 20px;
+        border-radius: 20px;
+        width: 75%;
+      }
+      span {
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="main-head">WORLD COUNTRIES LIST</h1>
+    <h2 id="total-country"></h2>
+    <p id="word-info"></p>
+    <button id="one-btn">STARTING WORD</button>
+    <button id="word-btn">SEARCH WITH ANY WORD</button>
+    <button id="cntry-sort">Sort||Reverse Sort</button>
+    <div id="container">
+      <input id="search-input" type="text" placeholder="Search Country..." />
+      <span>O=</span>
+    </div>
+    <div
+      id="result"
+      style="
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        text-align: center;
+        gap: 10px;
+        font-weight: bolder;
+        padding-top: 10%;
+      "
+    ></div>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
