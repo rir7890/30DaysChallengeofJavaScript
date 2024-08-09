@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Miniproject10</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      * {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      h1 {
+        text-align: center;
+      }
+      #input-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 1rem;
+        gap: 10px;
+      }
+      input {
+        font-size: 20px;
+        width: 20%;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      #add-player {
+        font-size: 20px;
+        width: 15%;
+        padding: 10px;
+        background-color: rgb(235, 154, 104);
+        border-radius: 10px;
+        border: 0px;
+      }
+      #result {
+        margin-top: 30px;
+        text-align: center;
+        padding: 0px 10% 0px 10%;
+        display: flex;
+        flex-direction: column;
+      }
+      #delete {
+        font-size: 30px;
+        border-radius: 50%;
+      }
+      #score-inc {
+        font-size: 30px;
+        border-radius: 50%;
+      }
+      #score-dec {
+        font-size: 30px;
+        border-radius: 50%;
+      }
+      #Player_div {
+        height: 100px;
+        width: 100%;
+        background-color: rgb(239, 179, 142);
+        display: flex;
+        flex-direction: row;
+        gap: 0px;
+        border-radius: 20px;
+        overflow: hidden;
+      }
+      #div_1 {
+        height: 100%;
+        background-color: rgb(239, 179, 142);
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+        justify-content: center;
+      }
+      #div_1 > span {
+        height: 30%;
+        text-align: center;
+      }
+      #div_2 {
+        height: 100%;
+        background-color: rgb(239, 179, 142);
+        width: 25%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+      #div_3 {
+        height: 100%;
+        background-color: rgb(239, 179, 142);
+        width: 25%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+      #div_4 {
+        height: 100%;
+        background-color: rgb(239, 179, 142);
+        width: 25%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>30 Days Of Javascript Challenge Leaderboard</h1>
+    <div id="input-container">
+      <input type="text" id="firstname" placeholder="First Name.." />
+      <input type="text" id="lastname" placeholder="Last Name.." />
+      <input type="text" id="country" placeholder="country" />
+      <input type="text" id="player_score" placeholder="Player Score" />
+      <button id="add-player">Add Player</button>
+    </div>
+    <p id="err"></p>
+    <div id="result">
+      <!-- <div id="Player_div">
+        <div id="div_1">
+          <span>Name</span>
+          <span>Date</span>
+        </div>
+        <div id="div_2">Country</div>
+        <div id="div_3">Score</div>
+        <div id="div_4">
+          <button id="delete">
+            <i class="fa fa-trash-o" style="color: red"></i>
+          </button>
+          <button id="score-inc">+5</button>
+          <button id="score-dec">-5</button>
+        </div>
+      </div> -->
+    </div>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
